@@ -3,7 +3,7 @@
  * Compute the cost of a custom desk
  *
  * @author (Stewart Johnston)
- * @version (2019-01-25.01)
+ * @version (2019-01-27.01)
  */
 import java.util.Map;
 import java.util.HashMap;
@@ -11,7 +11,8 @@ public class Desk
 {
 
     private static final int BASE_PRICE = 200;
-    private static final Map<String, Integer> WOOD_SURCHARGES = new HashMap<String, Integer>();
+    private static final Map<String, Integer> WOODS = new HashMap<String, Integer>();
+    private String wood_choice;
     private static final int DRAWER_CHARGE = 30;
     private int drawer_count;
     private Map<String, Integer> line_items;
@@ -24,14 +25,25 @@ public class Desk
      */
     public Desk()
     {   
-        WOOD_SURCHARGES.put("mahogany", 150);
-        WOOD_SURCHARGES.put("oak", 125);
-        WOOD_SURCHARGES.put("pine", 0);
+        WOODS.put("mahogany", 150);
+        WOODS.put("oak", 125);
+        WOODS.put("pine", 0);
         line_items = new HashMap<String, Integer>();
         line_items.put("base cost", BASE_PRICE);
         drawer_count = 0;
         surface_area = 0;
 
+    }
+
+    /**
+     * Retrieve the map of woods and values
+     * 
+     * @param None
+     * @return WOODS Map, key and value of String and Integer
+     */
+    public Map<String, Integer> woods()
+    {
+        return WOODS;
     }
 
     /**
@@ -48,7 +60,7 @@ public class Desk
             subtotal += value;
         }
         System.out.println("subtotal:\t$" + subtotal);
-        
+
         return;
     }
 
@@ -109,6 +121,5 @@ public class Desk
 
         return true;
     }
-    
-    
+
 }
