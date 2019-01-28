@@ -16,9 +16,10 @@ public class Desk
     private static final int DRAWER_CHARGE = 30;
     private int drawer_count;
     private Map<String, Integer> line_items;
+    private static final int FOOT_INCHES = 12;
     private static final int SURFACE_CHARGE = 50;
     private static final int SURFACE_THRESHOLD = 750;
-    private int surface_area;
+    private int length, width, surface_area;
 
     /**
      * Constructor for objects of class desk
@@ -31,7 +32,7 @@ public class Desk
         line_items = new HashMap<String, Integer>();
         line_items.put("base cost", BASE_PRICE);
         drawer_count = 0;
-        surface_area = 0;
+        surface_area = length = width = 0;
 
     }
 
@@ -65,6 +66,42 @@ public class Desk
     }
 
     /**
+     * Set length in inches
+     * 
+     * @param new length of Desk
+     * @return True if value is acceptable (> 0), false otherwise
+     */
+    public boolean set_length(int new_length)
+    {
+        if (0 >= new_length)
+        {
+            return false;
+        }
+
+        length = new_length;
+        this.set_surface_area(length * width);
+        return true;
+    }
+
+    /**
+     * Set width in inches
+     * 
+     * @param new width of Desk
+     * @return True if value is acceptable (> 0), false otherwise
+     */
+    public boolean set_width(int new_width)
+    {
+        if (0 >= new_width)
+        {
+            return false;
+        }
+
+        width = new_width;
+        this.set_surface_area(length * width);
+        return true;
+    }
+
+    /**
      * Set the desk's surface area and appropriate charge
      * <p>
      * If the new surface area exceeds the surface area threshold, then
@@ -74,7 +111,7 @@ public class Desk
      * @param A new surface area
      * @return True if surface area is acceptable (> 0), false otherwise
      */
-    public boolean set_surface_area(int new_surface_area)
+    private boolean set_surface_area(int new_surface_area)
     {
         if (0 >= new_surface_area)
         {
