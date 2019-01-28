@@ -22,7 +22,7 @@ public class Desk
     private int length, width, surface_area;
 
     /**
-     * Constructor for objects of class desk
+     * Constructor for objects of class Desk
      */
     public Desk()
     {   
@@ -68,7 +68,7 @@ public class Desk
     /**
      * Set length in inches
      * 
-     * @param new length of Desk
+     * @param int length of Desk
      * @return True if value is acceptable (> 0), false otherwise
      */
     public boolean set_length(int new_length)
@@ -86,7 +86,7 @@ public class Desk
     /**
      * Set width in inches
      * 
-     * @param new width of Desk
+     * @param int width of Desk
      * @return True if value is acceptable (> 0), false otherwise
      */
     public boolean set_width(int new_width)
@@ -108,7 +108,7 @@ public class Desk
      * the surface area charge is applied in the line items.
      * </p>
      *
-     * @param A new surface area
+     * @param int surface area
      * @return True if surface area is acceptable (> 0), false otherwise
      */
     private boolean set_surface_area(int new_surface_area)
@@ -136,7 +136,7 @@ public class Desk
     /**
      * Set number of drawers for desk
      * 
-     * @param New drawer count
+     * @param int drawer count
      * @return True if acceptable number (>= 0), false otherwise
      */
     public boolean set_drawer_count(int new_drawer_count)
