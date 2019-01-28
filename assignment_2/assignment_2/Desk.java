@@ -7,6 +7,7 @@
  */
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Set;
 public class Desk
 {
 
@@ -34,6 +35,28 @@ public class Desk
         drawer_count = 0;
         surface_area = length = width = 0;
 
+    }
+
+    /**
+     * Set choice of wood for desk
+     *
+     * @param String wood from among the keys of WOODS
+     * @return True if acceptable parameter, false if input out of range
+     */
+    public boolean set_wood_choice(String wood)
+    {
+        String LINE_ITEMS_KEY = "wood(" + wood_choice + ")";
+
+        Set<String> known_woods = WOODS.keySet();
+        if (!known_woods.contains(wood)){
+            return false;
+        }
+
+        line_items.remove(LINE_ITEMS_KEY);
+        wood_choice = wood;
+        LINE_ITEMS_KEY = "wood(" + wood_choice + ")";
+        line_items.put(LINE_ITEMS_KEY, WOODS.get(wood_choice));
+        return true;
     }
 
     /**
