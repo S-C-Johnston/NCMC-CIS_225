@@ -3,7 +3,7 @@
  * Compute the cost of a custom desk
  *
  * @author (Stewart Johnston)
- * @version (2019-01-27.01)
+ * @version (2019-01-27.02)
  */
 import java.util.Map;
 import java.util.HashMap;
