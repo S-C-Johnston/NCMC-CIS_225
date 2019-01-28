@@ -1,0 +1,7 @@
+%&tex
+When \verb|changeColor| is invoked with a parameter not enclosed in
+quotes, the method returns an error that it cannot find a symbol of the
+variable red. It looks like when passing this parameter, rather than
+interpreting red as a string, it interprets it as a variable in that
+scope, and it attempts to read the value thereof. With no such variable
+declared, it would naturally err out.

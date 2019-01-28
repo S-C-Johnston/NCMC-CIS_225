@@ -1,0 +1,11 @@
+%&tex
+It is likely that the Picture class, in its constructor, creates and
+handles new instances of the Square, Triangle, and Circle classes, and
+manipulates them as needed into position and color.
+
+When the \verb|draw()| method is called on a picture, it's likely that
+it invokes, from back to front layers, the \verb|makeVisible()| method
+of the appropriate objects.
+
+For as much as I know about OOP at this time, that's all I can think of
+to replicate the implementation.

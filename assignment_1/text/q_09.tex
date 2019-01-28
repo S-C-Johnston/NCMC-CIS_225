@@ -1,0 +1,34 @@
+%&tex
+I chose to replicate the image of the house and the sun.
+
+\begin{enumerate}
+	\item Create the object instances and make them visible:
+		\begin{enumerate}
+			\item new Square() -> house
+			\item new Square() -> window
+			\item new Triangle() -> roof
+			\item new Circle() -> sun
+		\end{enumerate}
+	\item Move (horizontally -150 pixels) and resize (150 pixels)
+		house square. The default color is red, so changing the
+		color isn't necessary.
+	\item Recolor (``black'') and \em{then} move (horizontally -120
+		pixels, invoked moveDown once), the window square.
+	\item Triangle default color is green, so changing it is not
+		necessary. Position is drawn from the center of the base
+		of the triangle, and knowing this and the position of
+		the other squares, the position can be set precisely.
+		Move (vertically -80 pixels, horizontally 25 pixels) and
+		resize (height 60, width 200) to line up with the top
+		center of the house.
+	\item Recolor (``yellow'') the sun circle and move it
+		(horizontally 150 pixels, vertically -50 pixels).
+\end{enumerate}
+
+This process could presumably be done in different ways, not the least
+of which are different orders of operations, as long as the black window
+square is touched after the red house square is touched. Movements are
+of course based on the default starting positions. If positions and
+colors on the canvas can be given as a parameters when creating the
+object, then this could be done more or less all in one shot during
+object instantiation.

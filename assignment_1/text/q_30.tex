@@ -1,0 +1,26 @@
+%&tex
+Primitive types built in to java include:
+\begin{description}
+	\item [byte] 8 bit whole number (in most cases, sometimes this
+		and other types is defined differently based on the
+		``word length'' of the processor which handles these
+		instructions. A 32 bit processor usually has a word
+		length of 32, for instance, and a 64 bit processor often
+		has a word length of 64).
+	\item [short] 16 bit whole number
+	\item [int] 32 bit whole number
+	\item [long] 64 bit whole number
+	\item [float] Floating point number capable of representing
+		numbers with rational decimals. Often word length in
+		bits, used frequently for high-performance decimal
+		needs, such as rendering 3d graphics in games, though
+		this is usually not the CPU performing those
+		calculations.
+	\item [double] A floating point number with double precision,
+		for when you can't have the weirdness of representing
+		decimals in binary get in the way of your accuracy.
+	\item [char] A single character in Unicode 16-bit encoding.
+	\item [boolean] A true or false value, which may possibly be
+		represented as a single bit, but this is not specified
+		in Appendix B of this book.
+\end{description}

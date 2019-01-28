@@ -1,0 +1,34 @@
+%&tex
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{color}
+\graphicspath{{./img/}}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{listings}
+
+\usepackage[Export]{adjustbox}
+\adjustboxset{max width=\ifdim\width>\linewidth \linewidth\else\width\fi}
+
+\title{Assignment 1}
+\author{Stewart Johnston\\
+  {CIS 225 -- Introduction to Java Programming I}\\
+  {NCMC}\\
+  {\texttt{johnstons1@student.ncmich.edu}}
+}
+\date{\today}
+
+\begin{document}
+
+\lstset{language=java,
+	basicstyle=\ttfamily,
+	floatplacement=tbph}
+
+\maketitle
+
+\input{Assignment_1.tex}
+
+\end{document}
