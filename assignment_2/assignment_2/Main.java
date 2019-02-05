@@ -16,8 +16,9 @@ public class Main
     {
 
         prompt("Welcome to Hammer Carpentry desk invoicer.\n");
-        Integer orderID = prompt_4_int("Please enter an order number: ");
-        prompt(orderID.toString());
+        Integer order_ID = prompt_4_int("Please enter an order number: ");
+        prompt("Order ID: " + order_ID.toString());
+        STDIN.nextLine();
 
         STDIN.close();
         return;
