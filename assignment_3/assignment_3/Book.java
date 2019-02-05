@@ -38,11 +38,11 @@ public class Book
      * @param   String  Author's last name
      * @return  String  The concatenated first and last name
      */
-    public String set_author(String name_first, String name_last)
+    public void set_author(String name_first, String name_last)
     {
         author.set_name_first(name_first);
         author.set_name_last(name_last);
-        return (author.name_first() + author.name_last());
+        return;
     }
 
 }
