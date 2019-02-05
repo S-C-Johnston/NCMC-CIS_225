@@ -19,9 +19,30 @@ public class Main
         Integer order_ID = prompt_4_int("Please enter an order number: ");
         prompt("Order ID: " + order_ID.toString());
         STDIN.nextLine();
+        prompt_length();
 
         STDIN.close();
         return;
+    }
+
+    /**
+     * Prompts the user for the length of the desk
+     */
+    private static int prompt_length()
+    {
+
+        final String LENGTH_MESSAGE = "Please enter the length of the desk in inches: ";
+        final String BAD_LENGTH = "Length must be greater than 0 inches.";
+
+        boolean result = prime_desk.set_length(prompt_4_int(LENGTH_MESSAGE));
+        while (!result)
+        {
+            prompt(BAD_LENGTH);
+            result = prime_desk.set_length(prompt_4_int(LENGTH_MESSAGE));
+        }
+
+        int results = 0;
+        return results;
     }
 
     /**
