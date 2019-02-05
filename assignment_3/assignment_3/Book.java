@@ -13,10 +13,12 @@ public class Book
 {
     private Author author;
     private String isbn; /*
-     * Interesting case. Don't want to attempt to save a few bytes with excessive cleverness,
-     * here, I just want to store the isbn. The easiest way, at this time, is to just use a
-     * string, without getting bogged in details of the exact formatting of an isbn, which I
-     * imagine is outside the scope of the purpose of this assignment.
+     * Interesting case. Don't want to attempt to save a few bytes with
+     * excessive cleverness, here, I just want to store the isbn. The
+     * easiest way, at this time, is to just use a string, without
+     * getting bogged in details of the exact formatting of an isbn,
+     * which I imagine is outside the scope of the purpose of this
+     * assignment.
      */
     private Date publication_date;
     private String title;
