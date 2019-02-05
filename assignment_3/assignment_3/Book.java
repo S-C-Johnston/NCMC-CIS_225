@@ -58,4 +58,26 @@ public class Book
         return (author.name_last() + ", " + author.name_first())
     }
 
+    /**
+     * Set a new isbn for this book object
+     *
+     * @param   String  new isbn
+     * @return  void
+     */
+    public void set_isbn(String new_isbn)
+    {
+        this.isbn = new_isbn;
+        return;
+    }
+
+    /**
+     * Returns the isbn of this book
+     *
+     * @return  String  isbn
+     */
+    public String isbn()
+    {
+        return this.isbn;
+    }
+
 }
