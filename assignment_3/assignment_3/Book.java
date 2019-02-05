@@ -1,5 +1,5 @@
 import java.util.Date;
-import java.util.Calendar;
+import java.util.Calendar;//https://stackoverflow.com/a/5165471
 
 /**
  * Meant to represent a Book, in the literary sense. Supports one author,
@@ -30,14 +30,17 @@ public class Book
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Set the author's first and last name
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     *
-    public int sampleMethod(int y)
-    {
-
-    }
+     * @param   String  Author's first name
+     * @param   String  Author's last name
+     * @return  String  The concatenated first and last name
      */
+    public String set_author(String name_first, String name_last)
+    {
+        author.set_name_first(name_first);
+        author.set_name_last(name_last);
+        return (author.name_first() + author.name_last());
+    }
+
 }
