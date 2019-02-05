@@ -8,13 +8,13 @@ import java.util.Scanner;
 public class Main
 {
     private static Scanner STDIN = new Scanner(System.in);
-
+    private static Desk prime_desk = new Desk();
     /**
      * main method
      */
     public static void main(String[] args)
     {
-        Desk prime_desk = new Desk();
+
         prompt("Welcome to Hammer Carpentry desk invoicer.\n");
         Integer orderID = prompt_4_int("Please enter an order number: ");
         prompt(orderID.toString());
