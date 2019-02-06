@@ -55,7 +55,7 @@ public class Book
      */
     public String author_full()
     {
-        return (author.name_last() + ", " + author.name_first())
+        return (author.name_last() + ", " + author.name_first());
     }
 
     /**
