@@ -66,7 +66,7 @@ public class Book
      */
     public void set_isbn(String new_isbn)
     {
-        this.isbn = new_isbn;
+        isbn = new_isbn;
         return;
     }
 
@@ -77,7 +77,7 @@ public class Book
      */
     public String isbn()
     {
-        return this.isbn;
+        return isbn;
     }
 
 }
