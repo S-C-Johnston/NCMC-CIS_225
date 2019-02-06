@@ -32,16 +32,26 @@ public class Book
     }
 
     /**
-     * Set the author's last and first name
+     * Set the author's first name
      *
-     * @param   String  Author's last name
      * @param   String  Author's first name
      * @return  String  The concatenated last and first name
      */
-    public void set_author(String name_last, String name_first)
+    public void set_author_name_first(String name_first)
+    {
+        author.set_name_first(name_first);
+        return;
+    }
+
+    /**
+     * Set the author's last name
+     *
+     * @param   String  Author's last name
+     * @return  String  The concatenated last and first name
+     */
+    public void set_author_name_last(String name_last)
     {
         author.set_name_last(name_last);
-        author.set_name_first(name_first);
         return;
     }
 
@@ -80,4 +90,22 @@ public class Book
         return isbn;
     }
 
+    /**
+     * Set the publication date
+     *
+     * @param   int     Year of publication
+     * @param   int     Month of publication
+     * @param   int     Day in month of publication
+     * @return  void
+     */
+    public void set_publication_date(int year, int month, int day)
+    {
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.YEAR,year);
+        cal.set(Calendar.MONTH,month);
+        cal.set(Calendar.DAY_OF_MONTH,day);
+
+        publication_date = cal.getTime();
+        return;
+    }
 }
