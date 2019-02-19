@@ -1,0 +1,7 @@
+%&tex
+If the conditional in the `insertMoney' method is changed to check for
+`greater than or equal to zero', then values of 0 become acceptable
+input, and zero is added to the balance. It's debatable on whether this
+is desireable behavior or not. I'm inclined that it is not desirable,
+because 0 is not useful in this context, and the state is touched for no
+reason whatsoever.
