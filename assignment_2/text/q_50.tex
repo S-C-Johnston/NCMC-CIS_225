@@ -1,0 +1,7 @@
+%&tex
+In the naive ticketMachine, the `printTicket' method incremented the
+value of `total' by the value of `balance', before zeroing `balance'. In
+the better ticketMachine, the values `total' and `balance' are
+incremented and decremented, respectively, by the value of `price'. This
+can only happen if `balance' is at least `price', so negative values of
+balance can't be accidentally reached.
