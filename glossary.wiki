@@ -1,0 +1,5 @@
+Accessor method: A method written for the purpose of seeing the value of
+a private field from outside the object to which the field belongs.
+
+Mutator method: A method written to modify (mutate) a field in an
+object.
