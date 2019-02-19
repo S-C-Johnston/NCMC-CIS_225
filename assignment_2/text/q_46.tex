@@ -1,0 +1,6 @@
+%&tex
+Because the `insertMoney' method contains a conditional, the balance
+doesn't change whenever the error message is printed. A value of zero is
+out of range for the conditional, so the execution never hits the
+success path, the error message is printed, and the balance remains
+unchanged.
