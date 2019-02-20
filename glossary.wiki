@@ -7,3 +7,7 @@ object.
 Cohesion: Something is said to be cohesive if all of its components are
 tightly related. A method can be said to be cohesive in their own
 context if they are limited to performing one task.
+
+External Method Call: When an object of a class wants to call a method
+in an different object, it uses dot notation, by using a "." between the
+identifier of the object and the name of the method.
