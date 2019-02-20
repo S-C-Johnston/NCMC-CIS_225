@@ -1,14 +1,8 @@
 public void printTicket()
 {
-	if(balance >= price) {
+	int amountLeftToPay = (price - balance);
+	if(0 >= amountLeftToPay) {
 		// Simulate the printing of a ticket.
-		System.out.println("##################");
-		System.out.println("# The BlueJ Line");
-		System.out.println("# Ticket");
-		System.out.println("# " + price + " cents.");
-		System.out.println("##################");
-		System.out.println();
-
 		// Update the total collected with the price.
 		total = total + price;
 		// Reduce the balance by the price.
@@ -16,7 +10,7 @@ public void printTicket()
 	}
 	else {
 		System.out.println("You must insert at least: " +
-				(price - balance) + " more cents.");
+				amountLeftToPay + " more cents.");
 
 	}
 }
