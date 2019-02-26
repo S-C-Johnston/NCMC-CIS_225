@@ -15,8 +15,8 @@
 :augroup END
 
 :augroup gv
-:au gv BufNewFile *.gv 0r /Users/stewart/current_semester/CIS_225/gvt/skeleton.gv
-:au gv BufNewFile,BufRead *.gv setlocal gvtwidth=72 noexpandtab tabstop=8 shiftwidth=8 
+:au gv BufNewFile *.gv 0r /Users/stewart/current_semester/CIS_225/skeleton.gv
+:au gv BufNewFile,BufRead *.gv setlocal textwidth=72 noexpandtab tabstop=8 shiftwidth=8 
 :augroup END
 
 :so ~/.vim/vimrc
