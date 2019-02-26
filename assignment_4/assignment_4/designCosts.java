@@ -37,9 +37,19 @@ public class designCosts
         return costs;
     }
 
+    /**
+     * The value in costs at an index. If the index is out of
+     * range, returns a 0
+     *
+     * @paremeter   int index
+     * @return  int cost at index XOR 0 if out of bounds
+     */
     public int costAtIndex(int index)
     {
-        return costs[index];
+        if (0 <= index && index < costs.length) {
+            return costs[index];
+        }
+        else return 0;
     }
 
 }
