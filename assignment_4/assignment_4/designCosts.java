@@ -14,6 +14,7 @@ public class designCosts
      */
     public designCosts(String design_type)
     {
+        design_type = design_type.toLowerCase();
         switch (design_type) {
             case "nature": costs = new int[] {300, 10, 15, 20, 25, 30};
                            break;
