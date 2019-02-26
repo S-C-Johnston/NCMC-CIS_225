@@ -5,12 +5,12 @@
 :echo "! If this is undesired behavior, check $HOME/.bash_aliases"
 
 :augroup tex
-:au tex BufNewFile *.tex 0r /Users/stewart/current_semester/CIS_225/assignment_2/text/skeleton.tex
+:au tex BufNewFile *.tex 0r /Users/stewart/current_semester/CIS_225/text/skeleton.tex
 :au tex BufNewFile,BufRead *.tex setlocal textwidth=72 noexpandtab tabstop=8 shiftwidth=8 
 :augroup END
 
 :augroup java
-:au java BufNewFile *.java 0r /Users/stewart/current_semester/CIS_225/assignment_2/src/skeleton.java
+:au java BufNewFile *.java 0r /Users/stewart/current_semester/CIS_225/src/skeleton.java
 :au java BufNewFile,BufRead *java setlocal textwidth=72 expandtab shiftwidth=4 tabstop=4
 :augroup END
 
