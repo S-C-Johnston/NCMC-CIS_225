@@ -31,7 +31,8 @@ public class designCosts
         }
     }
 
-    public void <>()
+    public int[] costs()
     {
+        return costs;
     }
 }
