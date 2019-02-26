@@ -35,4 +35,10 @@ public class designCosts
     {
         return costs;
     }
+
+    public int costAtIndex(int index)
+    {
+        return costs[index];
+    }
+
 }
