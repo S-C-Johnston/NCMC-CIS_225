@@ -27,7 +27,7 @@ public class Invoice
      */
     public Invoice()
     {
-        line_items = new LinkedHashMap<String, Integer>;
+        line_items = new LinkedHashMap<String, Integer>();
     }
 
     /**
