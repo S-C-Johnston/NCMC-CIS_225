@@ -17,4 +17,15 @@ public class WebOMatic
     {
     }
 
+    /**
+     * Assigns designCosts to new DesignCosts object constructed with
+     * the parameter string as input.
+     *
+     * @param   String  design
+     * @return  void
+     */
+    public void chooseDesign(String design)
+    {
+        designCosts = new DesignCosts(design);
+    }
 }
