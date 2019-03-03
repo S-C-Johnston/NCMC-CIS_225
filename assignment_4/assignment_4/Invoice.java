@@ -1,33 +1,51 @@
-
 /**
- * Write a description of class Invoice here.
+ * A class composed of a Map (line_items) of entries and prices for line
+ * items in an invoice. The main purpose of this class is to provide
+ * utility around the line_items Map, and there aren't any special rules
+ * for it besides generic types. As such, I see no reason not to expose
+ * line_items directly, rather than writing delegator methods for the
+ * entirety of the Map interface.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Stewart Johnston)
+ * @version (2019-03-03.01)
  */
+import java.util.Map;
+import java.util.HashMap;
+import java.util.LinkedHashMap; //Because the order of entry is more
+//important than time to access any particular value by its key. Also,
+//it prevents my having to rewrite the wheel or perform alorithmic
+//wizardry.
+
 public class Invoice
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    public Map<String, Integer> line_items;
+    // No special rules for this mapping, honestly. Just don't hurt
+    // yourself with the wrong types.
 
     /**
      * Constructor for objects of class Invoice
      */
     public Invoice()
     {
-        // initialise instance variables
-        x = 0;
+        line_items = new LinkedHashMap<String, Integer>;
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Print line items and their costs, including a subtotal
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  None
+     * @return No return value; prints the contents of line_items
      */
-    public int sampleMethod(int y)
+    public void print_line_items()
     {
-        // put your code here
-        return x + y;
+        int subtotal = 0;
+        line_items.forEach((k, v)->System.out.println(k + ":\t$" + v));
+        for(Integer value: line_items.values()){
+            subtotal += value;
+        }
+        System.out.println("subtotal:\t$" + subtotal);
+
+        return;
     }
+
 }
