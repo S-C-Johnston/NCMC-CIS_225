@@ -39,7 +39,9 @@ public class designCosts
 
     /**
      * The value in costs at an index. If the index is out of
-     * range, returns a 0
+     * range, returns a 0. I know that the IndexOutOfBounds exception
+     * exists, but this assignment code is not necessarily meant to
+     * demonstrate exception handling.
      *
      * @paremeter   int index
      * @return  int cost at index XOR 0 if out of bounds
