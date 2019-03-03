@@ -4,7 +4,7 @@
  * @author (Stewart Johnston)
  * @version (2019-02-19.01)
  */
-public class designCosts
+public class DesignCosts
 {
     // instance variables - replace the example below with your own
     private int[] costs;
@@ -12,7 +12,7 @@ public class designCosts
     /**
      * Constructor for objects of class designCosts
      */
-    public designCosts(String design_type)
+    public DesignCosts(String design_type)
     {
         design_type = design_type.toLowerCase();
         switch (design_type) {
