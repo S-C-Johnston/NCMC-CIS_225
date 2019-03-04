@@ -32,10 +32,11 @@ public class WebOMatic
 
     /**
      * Take an array of bools and shove those into the featureChoices
-     * field. Idea is that each bool in the field corresponds with the
-     * index of a feature in the designCosts object, so the first
-     * element of the array -- relating to the design type in the
-     * designCosts object -- will always be true.
+     * field, prepending them with a "true". Idea is that each bool in
+     * the field corresponds with the index of a feature in the
+     * designCosts object, so the first element of the array -- relating
+     * to the design type in the designCosts object -- will always be
+     * true.
      *
      * @param   boolean[]   featureChoices
      * @return  void
