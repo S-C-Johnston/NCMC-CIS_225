@@ -18,6 +18,10 @@ public class WebOMatic
      */
     public WebOMatic()
     {
+        invoice = new Invoice();
+        design = "nature";
+        designCosts = new DesignCosts(design);
+        featureChoices = new boolean[] {true};
     }
 
     /**
@@ -25,8 +29,10 @@ public class WebOMatic
      */
     public WebOMatic(String design)
     {
-       designCosts = new DesignCosts(design);
        this.design = design;
+       designCosts = new DesignCosts(design);
+       invoice = new Invoice();
+       featureChoices = new boolean[] {true};
     }
 
     /**
