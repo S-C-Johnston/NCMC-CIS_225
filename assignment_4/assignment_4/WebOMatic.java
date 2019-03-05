@@ -90,4 +90,13 @@ public class WebOMatic
         }
     }
 
+    /**
+     * Invoke invoice.print_line_items() on the currently used invoice
+     * object.
+     */
+    public void printInvoice()
+    {
+        invoice.print_line_items();
+    }
+
 }
