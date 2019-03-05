@@ -5,6 +5,7 @@
  * @author (Stewart Johnston)
  * @version (2019-03-01.01)
  */
+import java.util.Arrays;
 public class WebOMatic
 {
     private Invoice invoice;
@@ -43,6 +44,10 @@ public class WebOMatic
      */
     public void chooseFeatures(boolean[] featureChoices)
     {
-        this.featureChoices = new boolean[] {true, featureChoices.clone()};
+        this.featureChoices = new boolean[1
+            + (featureChoices.length - 1)];
+        this.featureChoices[0] = true;
+        System.arraycopy(featureChoices, 0, this.featureChoices, 1,
+                featureChoices.length);
     }
 }
