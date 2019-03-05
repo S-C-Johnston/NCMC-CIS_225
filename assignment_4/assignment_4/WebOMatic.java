@@ -62,7 +62,7 @@ public class WebOMatic
     public void chooseFeatures(boolean[] featureChoices)
     {
         this.featureChoices = new boolean[1
-            + (featureChoices.length - 1)];
+            + featureChoices.length];
         this.featureChoices[0] = true;
         System.arraycopy(featureChoices, 0, this.featureChoices, 1,
                 featureChoices.length);
