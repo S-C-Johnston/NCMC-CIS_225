@@ -61,4 +61,33 @@ public class WebOMatic
         System.arraycopy(featureChoices, 0, this.featureChoices, 1,
                 featureChoices.length);
     }
+
+    /**
+     * Get prices/features and add entries to the invoice. Does this in
+     * one shot, not incrementally. The invoice will reference a newly
+     * instantiated Invoice.
+     *
+     * @param   none
+     * @return  void
+     */
+    public void calcInvoice()
+    {
+
+        invoice = new Invoice();
+        costs = designCosts.costs();
+        for(int i = 0; i < costs.length(); i++)
+        {
+            if (0 == i){
+                invoice.line_items.put("Design type: " + design,
+                        costs[i]);
+                continue;
+            }
+
+            if (null != featureChoices[i] && true == featureChoices[i]){
+                invoice.line_items.put("Feature: " + i.toString(),
+                        costs[i]);
+            }
+        }
+    }
+
 }
