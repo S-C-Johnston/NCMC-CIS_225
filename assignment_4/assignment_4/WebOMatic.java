@@ -74,8 +74,8 @@ public class WebOMatic
     {
 
         invoice = new Invoice();
-        costs = designCosts.costs();
-        for(int i = 0; i < costs.length(); i++)
+        int[] costs = designCosts.costs();
+        for(int i = 0; i < costs.length; i++)
         {
             if (0 == i){
                 invoice.line_items.put("Design type: " + design,
@@ -83,9 +83,9 @@ public class WebOMatic
                 continue;
             }
 
-            if (null != featureChoices[i] && true == featureChoices[i]){
-                invoice.line_items.put("Feature: " + i.toString(),
-                        costs[i]);
+            if ((featureChoices.length > i) && true ==
+                    featureChoices[i]){
+                invoice.line_items.put("Feature: " + i, costs[i]);
             }
         }
     }
