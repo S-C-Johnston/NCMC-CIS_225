@@ -11,6 +11,7 @@ public class WebOMatic
     private Invoice invoice;
     private DesignCosts designCosts;
     private boolean[] featureChoices;
+    private String design;
 
     /**
      * Constructor for objects of class WebOMatic
@@ -19,9 +20,13 @@ public class WebOMatic
     {
     }
 
+    /**
+     * WebOMatic constructor which takes a design
+     */
     public WebOMatic(String design)
     {
        designCosts = new DesignCosts(design);
+       this.design = design;
     }
 
     /**
@@ -33,6 +38,7 @@ public class WebOMatic
      */
     public void chooseDesign(String design)
     {
+        this.design = design;
         designCosts = new DesignCosts(design);
     }
 
