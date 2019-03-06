@@ -18,18 +18,6 @@ import java.util.LinkedHashMap; //Because the order of entry is more
 
 public class Invoice
 {
-    public Map<String, Integer> line_items;
-    // No special rules for this mapping, honestly. Just don't hurt
-    // yourself with the wrong types.
-
-    /**
-     * Constructor for objects of class Invoice
-     */
-    public Invoice()
-    {
-        line_items = new LinkedHashMap<String, Integer>();
-    }
-
     /**
      * Print line items and their costs, including a subtotal
      *

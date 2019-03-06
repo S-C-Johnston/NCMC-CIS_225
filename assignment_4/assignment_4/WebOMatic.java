@@ -5,10 +5,15 @@
  * @author (Stewart Johnston)
  * @version (2019-03-01.01)
  */
+
 import java.util.Arrays;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+
 public class WebOMatic
 {
-    private Invoice invoice;
+    public Map<String, Integer> line_items; //invoice
     private boolean isInvoiceCalculated = false;
     private DesignCosts designCosts;
     private boolean[] featureChoices;
@@ -19,7 +24,7 @@ public class WebOMatic
      */
     public WebOMatic()
     {
-        invoice = new Invoice();
+        line_items = new LinkedHashMap<String, Integer>();
         design = "nature";
         designCosts = new DesignCosts(design);
         featureChoices = new boolean[] {true};
@@ -32,7 +37,7 @@ public class WebOMatic
     {
         this.design = design;
         designCosts = new DesignCosts(design);
-        invoice = new Invoice();
+        line_items = new LinkedHashMap<String, Integer>();
         featureChoices = new boolean[] {true};
     }
 
@@ -70,9 +75,9 @@ public class WebOMatic
     }
 
     /**
-     * Get prices/features and add entries to the invoice. Does this in
-     * one shot, not incrementally. The invoice will reference a newly
-     * instantiated Invoice.
+     * Get prices/features and add entries to the line_items. Does this
+     * in one shot, not incrementally. The line_items will reference a
+     * newly instantiated Map.
      *
      * @param   none
      * @return  void
@@ -80,13 +85,13 @@ public class WebOMatic
     public void calcInvoice()
     {
 
-        invoice = new Invoice();
+        line_items = new LinkedHashMap<String, Integer>();
         int[] costs = designCosts.costs();
         for(int i = 0; i < costs.length; i++)
         {
             if (0 == i)
             {
-                invoice.line_items.put("Design type: " + design,
+                line_items.put("Design type: " + design,
                         costs[i]);
                 continue;
             }
@@ -94,7 +99,7 @@ public class WebOMatic
             if ((featureChoices.length > i) && true ==
                     featureChoices[i])
             {
-                invoice.line_items.put("Feature: " + i, costs[i]);
+                line_items.put("Feature: " + i, costs[i]);
             }
         }
 
@@ -102,8 +107,8 @@ public class WebOMatic
     }
 
     /**
-     * Invoke invoice.print_line_items() on the currently used invoice
-     * object. If the invoice is not calculated, call a method to do so.
+     * Invoke Invoice.print_line_items() on line_items object. If the
+     * invoice is not calculated, call a method to do so.
      */
     public void printInvoice()
     {
@@ -111,7 +116,7 @@ public class WebOMatic
             calcInvoice();
         }
 
-        invoice.print_line_items();
+        Invoice.print_line_items(line_items);
     }
 
 }
