@@ -36,7 +36,7 @@ public class Invoice
      * @param  None
      * @return No return value; prints the contents of line_items
      */
-    public void print_line_items()
+    public static void print_line_items(Map<String, Integer> line_items)
     {
         int subtotal = 0;
         line_items.forEach((k, v)->System.out.println(k + ":\t$" + v));
