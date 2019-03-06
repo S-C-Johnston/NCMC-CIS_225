@@ -29,10 +29,10 @@ public class WebOMatic
      */
     public WebOMatic(String design)
     {
-       this.design = design;
-       designCosts = new DesignCosts(design);
-       invoice = new Invoice();
-       featureChoices = new boolean[] {true};
+        this.design = design;
+        designCosts = new DesignCosts(design);
+        invoice = new Invoice();
+        featureChoices = new boolean[] {true};
     }
 
     /**
@@ -61,8 +61,7 @@ public class WebOMatic
      */
     public void chooseFeatures(boolean[] featureChoices)
     {
-        this.featureChoices = new boolean[1
-            + featureChoices.length];
+        this.featureChoices = new boolean[1 + featureChoices.length];
         this.featureChoices[0] = true;
         System.arraycopy(featureChoices, 0, this.featureChoices, 1,
                 featureChoices.length);
@@ -83,14 +82,16 @@ public class WebOMatic
         int[] costs = designCosts.costs();
         for(int i = 0; i < costs.length; i++)
         {
-            if (0 == i){
+            if (0 == i)
+            {
                 invoice.line_items.put("Design type: " + design,
                         costs[i]);
                 continue;
             }
 
             if ((featureChoices.length > i) && true ==
-                    featureChoices[i]){
+                    featureChoices[i])
+            {
                 invoice.line_items.put("Feature: " + i, costs[i]);
             }
         }
