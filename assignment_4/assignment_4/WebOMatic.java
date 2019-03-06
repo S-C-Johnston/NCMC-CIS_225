@@ -9,6 +9,7 @@ import java.util.Arrays;
 public class WebOMatic
 {
     private Invoice invoice;
+    private boolean isInvoiceCalculated = false;
     private DesignCosts designCosts;
     private boolean[] featureChoices;
     private String design;
@@ -65,6 +66,7 @@ public class WebOMatic
         this.featureChoices[0] = true;
         System.arraycopy(featureChoices, 0, this.featureChoices, 1,
                 featureChoices.length);
+        isInvoiceCalculated = false;
     }
 
     /**
@@ -95,14 +97,20 @@ public class WebOMatic
                 invoice.line_items.put("Feature: " + i, costs[i]);
             }
         }
+
+        isInvoiceCalculated = true;
     }
 
     /**
      * Invoke invoice.print_line_items() on the currently used invoice
-     * object.
+     * object. If the invoice is not calculated, call a method to do so.
      */
     public void printInvoice()
     {
+        if (! isInvoiceCalculated) {
+            calcInvoice();
+        }
+
         invoice.print_line_items();
     }
 
