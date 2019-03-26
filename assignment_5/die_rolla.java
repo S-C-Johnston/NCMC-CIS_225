@@ -27,8 +27,8 @@ public class Die_rolla
     public Die_rolla(int die_size, int num_dice, int target_num)
     {
         set_die_size(die_size);
-        this.num_dice = num_dice;
-        this.target_num = target_num;
+        set_num_dice(num_dice);
+        set_target(target_num);
     }
 
     /**
