@@ -13,6 +13,13 @@ public class Die_rolla
 {
     // instance variables - replace the example below with your own
     private int die_size, num_dice, target_num;
+    private static final int default_size = 6,
+            max_num = 10,
+            min_num = 1,
+            default_num = 1,
+            min_target = 5,
+            max_target = 30,
+            default_target = 5;
 
     /**
      * Constructor for objects of class die_rolla
@@ -26,7 +33,7 @@ public class Die_rolla
 
     /**
      * Set the die_size; if new_size is not in desired range, default to
-     * a 6-sided die.
+     * the default_size constant, which at this time is 6.
      *
      */
     public void set_die_size(int new_size)
@@ -46,7 +53,7 @@ public class Die_rolla
                     break;
             case 100: this.die_size = 100;
                     break;
-            default: this.die_size = 6;
+            default: this.die_size = this.default_size;
                      break;
         }
     }
