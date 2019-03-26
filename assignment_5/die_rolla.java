@@ -75,6 +75,22 @@ public class Die_rolla
     }
 
     /**
+     * Set new target to reach when rolling against. Must be in range,
+     * otherwise set to default
+     *
+     * @param   int new target to roll against
+     */
+    public void set_target(int new_target)
+    {
+        if (min_target <= new_target && new_target <= max_target) {
+            this.target_num = new_target;
+        }
+        else {
+            this.target_num = default_target;
+        }
+    }
+
+    /**
      * Roll a die and return a number between 1 and the die-size
      *
      * @return  Number between 1 and die-size, inclusive
