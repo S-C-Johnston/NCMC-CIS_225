@@ -19,9 +19,36 @@ public class Die_rolla
      */
     public Die_rolla(int die_size, int num_dice, int target_num)
     {
-        this.die_size = die_size;
+        set_die_size(die_size);
         this.num_dice = num_dice;
         this.target_num = target_num;
+    }
+
+    /**
+     * Set the die_size; if new_size is not in desired range, default to
+     * a 6-sided die.
+     *
+     */
+    public void set_die_size(int new_size)
+    {
+        switch new_size {
+            case 4: this.die_size = 4;
+                    break;
+            case 6: this.die_size = 6;
+                    break;
+            case 8: this.die_size = 8;
+                    break;
+            case 10: this.die_size = 10;
+                    break;
+            case 12: this.die_size = 12;
+                    break;
+            case 20: this.die_size = 20;
+                    break;
+            case 100: this.die_size = 100;
+                    break;
+            default: this.die_size = 6;
+                     break;
+        }
     }
 
     /**
