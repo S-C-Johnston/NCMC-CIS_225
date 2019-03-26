@@ -59,6 +59,22 @@ public class Die_rolla
     }
 
     /**
+     * Assign new number of dice to roll, between the minimum and
+     * maximum, otherwise will default to 1 die.
+     *
+     * @param   int new number of dice.
+     */
+    public void set_num_dice(int new_num)
+    {
+        if (min_num <= new_num && new_num <= max_num) {
+            this.num_dice = new_num;
+        }
+        else {
+            this.num_dice = default_num;
+        }
+    }
+
+    /**
      * Roll a die and return a number between 1 and the die-size
      *
      * @return  Number between 1 and die-size, inclusive
