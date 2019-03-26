@@ -38,7 +38,7 @@ public class Die_rolla
      */
     public void set_die_size(int new_size)
     {
-        switch new_size {
+        switch (new_size) {
             case 4: this.die_size = 4;
                     break;
             case 6: this.die_size = 6;
@@ -46,13 +46,13 @@ public class Die_rolla
             case 8: this.die_size = 8;
                     break;
             case 10: this.die_size = 10;
-                    break;
+                     break;
             case 12: this.die_size = 12;
-                    break;
+                     break;
             case 20: this.die_size = 20;
-                    break;
+                     break;
             case 100: this.die_size = 100;
-                    break;
+                      break;
             default: this.die_size = this.default_size;
                      break;
         }
