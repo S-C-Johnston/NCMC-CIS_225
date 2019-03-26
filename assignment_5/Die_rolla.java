@@ -130,4 +130,41 @@ public class Die_rolla
         Random random = new Random();
         return (random.nextInt(this.die_size) + 1);
     }
+
+    /**
+     * Roll dice in sequence until either a success occurs, a critical
+     * failure occurs (too many ones get rolled) or we run out of dice
+     * to roll.
+     *
+     * @return  boolean if success was had
+     */
+    public boolean roll_against_target() { boolean success; int result,
+        total = 0, attempts = 0, ones_count = 0;
+
+        do{
+            result = roll_die();
+            total += result;
+
+            if (total >= this.target_num) {
+                return success = true;
+            }
+
+            if (result == die_size) {
+                continue;
+                //Explode the die if it hits the maximum value it can.
+            }
+
+            total = 0;
+
+            if (1 == result) {
+                ones_count++;
+                if (ones_count > (die_size / 2)) {
+                    return success = false;
+                }
+            }
+
+            attempts++;
+        } while (attempts < this.num_dice);
+        return success = false;
+    }
 }
