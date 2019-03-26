@@ -32,6 +32,36 @@ public class Die_rolla
     }
 
     /**
+     * Returns numeric size of die
+     *
+     * @return  int size of die
+     */
+    public int die_size()
+    {
+        return die_size;
+    }
+
+    /**
+     * Returns number of dice
+     *
+     * @return  int number of dice
+     */
+    public int num_dice()
+    {
+        return num_dice;
+    }
+
+    /**
+     * Returns target number
+     *
+     * @retrun  int target number
+     */
+    public int target_num()
+    {
+        return target_num;
+    }
+
+    /**
      * Set the die_size; if new_size is not in desired range, default to
      * the default_size constant, which at this time is 6.
      *
